@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #4d4846;
+    margin: 0;
+}
+.naglowek {
+    background-color: #1c1a19;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray; 
+    position: relative; 
+    z-index: 10; 
+}
+
+.naglowek img {
+    width: 150px;
+    height: 150px;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1); 
+    color: #f0c674; 
+}
+
+.naglowek .onas, #galeria, #kontakt, #regulamin {
+    padding: 10px 20px; /* Odstępy wokół tekstu */
+}
+
+.naglowek .onas{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+.hero-section {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5); 
+    background-image: url('/strona1/zdj/602e23e834f14_o_medium.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block; 
+    padding: 10px 20px; 
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+    box-shadow: 0px 0px 10px rgba(240, 198, 116, 0.8);
+}
+.naglowek #galeria{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #kontakt{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #regulamin{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+section h1, section h2 {
+    font-size: 2.5rem;          /* Większy rozmiar czcionki */
+    margin-bottom: 20px;        /* Przestrzeń poniżej tytułów */
+    color: #333;                /* Ciemny tekst */
+    opacity: 0;                 /* Początkowa przezroczystość */
+    transform: translateX(-100px); /* Przesunięcie w lewo */
+    animation: slideInLeft 1s forwards; /* Animacja przesuwania z lewej */
+}
+
+section p, section ul li {
+    font-size: 1.1rem;          /* Trochę większa czcionka dla lepszej czytelności */
+    line-height: 1.6;           /* Zwiększenie wysokości linii */
+    color: #555;                /* Średni szary kolor dla paragrafów i elementów listy */
+    opacity: 0;                 /* Początkowa przezroczystość */
+    transform: translateX(100px); /* Przesunięcie w prawo */
+    animation: slideInRight 1s forwards; /* Animacja przesuwania z prawej */
+}
+
+ul li {
+    margin: 10px 0;             /* Przestrzeń pomiędzy elementami listy */
+}
+
+#about-us h2, #about-us h1 {
+    color: white;               /* Biały kolor dla tytułów w #about-us */
+    font-size: 2.8rem;          /* Nieco większa czcionka dla tytułów */
+    margin-bottom: 25px;        /* Większa przestrzeń dla tytułów */
+    opacity: 0;                 /* Początkowa przezroczystość */
+    transform: translateY(-50px); /* Przesunięcie w górę */
+    animation: slideInUp 1s forwards; /* Animacja przesuwania w górę */
+    letter-spacing: 1.5px;
+}
+
+#about-us p {
+    color: white;               /* Biały kolor dla paragrafów w #about-us */
+    font-size: 1.2rem;          /* Większa czcionka dla lepszej widoczności */
+    line-height: 1.8;           /* Zwiększona wysokość linii */
+    max-width: 800px;           /* Maksymalna szerokość tekstu */
+    margin: 0 auto;             /* Wyśrodkowanie paragrafu */
+    opacity: 0;                 /* Początkowa przezroczystość */
+    transform: translateY(50px); /* Przesunięcie w dół */
+    animation: fadeInUp 1s forwards; /* Animacja zanikania i przesuwania w górę */
+}
+
+#about-us ul {
+    list-style-type: none;      /* Usunięcie domyślnych punktów listy */
+    padding: 0;
+}
+
+#about-us {
+    padding: 40px 20px;         /* Padding wokół sekcji */
+    background-color: #2c3e50;  /* Ciemne tło dla kontrastu */
+}
+
+/* Animacja przesuwania z lewej */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateX(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja przesuwania z prawej */
+@keyframes slideInRight {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateX(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja przesuwania w górę */
+@keyframes slideInUp {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateY(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja zanikania i przesuwania w górę */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateY(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 768px) {
+    section h1, section h2 {
+        font-size: 2rem;          /* Mniejszy rozmiar nagłówków na urządzeniach mobilnych */
+    }
+
+    section p, section ul li {
+        font-size: 1rem;          /* Mniejsza czcionka dla lepszej czytelności na mobilnych */
+    }
+
+    #about-us h1, #about-us h2 {
+        font-size: 2.5rem;        /* Mniejszy rozmiar tytułów na mobilnych */
+    }
+
+    #about-us p {
+        font-size: 1.1rem;        /* Dostosowanie rozmiaru czcionki w paragrafach na mobilnych */
+        max-width: 100%;          /* Pozwól, aby tekst rozciągał się na szerokość ekranu */
+    }
+}
+
+
+/* footer*/
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 30%;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
+
+h3, h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #ff6600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-bottom {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s forwards;
+    animation-delay: 0.5s;
+}
