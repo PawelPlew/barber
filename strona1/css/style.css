@@ -47,7 +47,7 @@ body{
 .hero-section {
     position: relative;
     background: rgba(0, 0, 0, 0.5); 
-    background-image: url('/strona1/zdj/602e23e834f14_o_medium.jpg');
+    background-image: url('./../zdj/602e23e834f14_o_medium.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
