@@ -1,0 +1,365 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #262626;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #f1c40f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.naglowek {
+    background-color: #1c1a19;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray; 
+    position: relative; 
+    z-index: 10; 
+}
+
+.naglowek img {
+    width: 150px;
+    height: 150px;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1); 
+    color: #f0c674; 
+}
+
+.naglowek .onas, #galeria, #kontakt, #regulamin {
+    padding: 10px 20px; /* Odstępy wokół tekstu */
+}
+
+.naglowek .onas{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block; 
+    padding: 10px 20px; 
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+    box-shadow: 0px 0px 10px rgba(240, 198, 116, 0.8);
+}
+.naglowek #galeria{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #kontakt{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #regulamin{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: #f1c40f;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+
+.services-section {
+    padding: 40px 20px;
+}
+
+.services-section .section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    width: 250px;
+    margin: 40px;
+}
+
+.service-card img {
+    height: 300px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    width: 250px;
+}
+
+.service-card h3 {
+    color: #f1c40f;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Extras Section */
+.extras-section {
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+}
+
+.extras-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.extra-item {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    width: 250px;
+}
+
+.extra-item:hover {
+    transform: scale(1.05);
+}
+
+.extra-item h3 {
+    font-size: 20px;
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+.extra-item p {
+    font-size: 14px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 40px 20px;
+}
+
+.pricing-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background-color: #f1c40f;
+    color: #262626;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.pricing-table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+.pricing-table tr:hover {
+    background-color: #444;
+}
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo i opis */
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-brand h2 {
+    font-size: 2rem;
+    color: #d2ac3b;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* Linki nawigacyjne */
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3 {
+    color: #d2ac3b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d2ac3b;
+}
+
+/* Kontakt */
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contact h3 {
+    color: #d2ac3b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-contact i {
+    color: #d2ac3b;
+}
+
+/* Media społecznościowe */
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.footer-social h3 {
+    color: #d2ac3b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d2ac3b;
+    transform: scale(1.2);
+}
+
+/* Dolny pasek stopki */
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: inline-block;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galeria - Barbers Two</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
 </head>
 <body>
     <header class="naglowek">
-        <a href="./index.html"><img src="../zdj/logo1.png" alt=""></a>
+        <a href="./index.html"><img src="../zdj/logo1.png" alt="Logo Barber Shop"></a>
         <h2><a class="onas" href="../index/onas.html">O NAS</a></h2>
         <h2><a id="galeria" href="../index/Galeria.html">GALERIA</a></h2>
         <h2><a id="kontakt" href="../index/Kontakt.html">KONTAKT</a></h2>
@@ -17,49 +17,40 @@
         <h2><a id="regulamin" href="../index/uslugi.html">USŁUGI</a></h2>
     </header>
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
-                <h3>Telefon</h3>
-                <br>
-                <p>+48 666 341 272</p>
+
+
+
+    <main class="main-content">
+        <section class="gallery-intro">
+            <h1>Galeria</h1>
+            <p>
+                Przygotowaliśmy zbiór naszych najlepszych momentów, abyś mógł zobaczyć, co na Ciebie czeka.
+                W tej galerii znajdziesz pokaz slajdów wyjątkowych chwil z naszego salonu.
+            </p>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-slider-container">
+                <div class="gallery-slider" id="gallerySlider">
+                    <div class="slide"><img src="../zdj/zdj1.jpg" alt="Zdjęcie 1"></div>
+                    <div class="slide"><img src="../zdj/zdj2.jpg" alt="Zdjęcie 2"></div>
+                    <div class="slide"><img src="../zdj/zdj3.jpg" alt="Zdjęcie 3"></div>
+                    <!-- Dodaj więcej zdjęć -->
+                </div>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <br>
-                <p>barbers.two@gmail.com</p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Adres</h3>
-                <br>
-                <p>ul. Piękna 24/26A, 00-549 Warszawa, Śródmieście</p>
-            </div>
-        </div>
-        <div class="social-container">
-            <a href="https://www.facebook.com" target="_blank" class="social-link">
-                <i class="fab fa-facebook"></i>
-                Facebook
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-                Instagram
-            </a>
-        </div>
-    </section>
-    
+        </section>
+    </main>
+
+
+
 
     <footer class="footer">
         <div class="footer-container">
-            <!-- Logo i krótki opis -->
             <div class="footer-brand">
                 <h2>Barbers Two</h2>
                 <p>Najlepsze miejsce na męską pielęgnację. Styl, elegancja i precyzja w jednym miejscu.</p>
             </div>
-    
-            <!-- Linki nawigacyjne -->
+
             <div class="footer-links">
                 <h3>Nawigacja</h3>
                 <ul>
@@ -70,7 +61,6 @@
                 </ul>
             </div>
     
-            <!-- Sekcja kontaktowa -->
             <div class="footer-contact">
                 <h3>Kontakt</h3>
                 <p><i class="fas fa-phone-alt"></i> +48 666 341 272</p>
@@ -78,7 +68,6 @@
                 <p><i class="fas fa-map-marker-alt"></i> ul. Piękna 24/26A, 00-549 Warszawa</p>
             </div>
     
-            <!-- Media społecznościowe -->
             <div class="footer-social">
                 <h3>Śledź nas</h3>
                 <div class="social-icons">
@@ -92,6 +81,20 @@
             <p>&copy; 2024 Barbers Two. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
-    <script src="../js/strzala.js"></script>
+
+    <script>
+        const slider = document.getElementById("gallerySlider");
+    let index = 0;
+
+    function autoSlide() {
+        const slides = document.querySelectorAll(".slide");
+        index = (index + 1) % slides.length;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Ustaw automatyczne przewijanie co 4 sekundy
+    setInterval(autoSlide, 4000);
+
+    </script>
 </body>
 </html>
