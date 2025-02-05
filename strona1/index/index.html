@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Shop</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
 
@@ -98,7 +99,7 @@ body {
 }
 
 .naglowek {
-    background-color: #1c1a19;
+    background-color: #040101;
     height: 200px;
     display: flex;
     justify-content: space-around;
@@ -160,7 +161,6 @@ body {
     color: #d2ac3b;
 }
 
-/* Stopka */
 .footer {
     background-color: #111;
     color: #fff;
@@ -177,7 +177,6 @@ body {
     margin: 0 auto;
 }
 
-/* Logo i opis */
 .footer-brand {
     flex: 1;
     min-width: 250px;
@@ -194,7 +193,6 @@ body {
     font-size: 1rem;
 }
 
-/* nawigacja */
 .footer-links {
     flex: 1;
     min-width: 200px;
@@ -225,7 +223,6 @@ body {
     color: #d2ac3b;
 }
 
-/* Kontakt */
 .footer-contact {
     flex: 1;
     min-width: 250px;
@@ -249,7 +246,6 @@ body {
     color: #d2ac3b;
 }
 
-/* Media społecznościowe */
 .footer-social {
     flex: 1;
     min-width: 200px;
@@ -262,7 +258,42 @@ body {
     margin-bottom: 15px;
 }
 
-/* Main content styles */
+.social-icons a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d2ac3b;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: inline-block;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
 .map-container {
     text-align: center;
     margin: 20px 0;
@@ -274,7 +305,6 @@ body {
     height: 400px;
 }
 
-/* Animacje */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -313,7 +343,6 @@ body {
     }
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -393,6 +422,279 @@ ul li {
     color: #aaa;
 }
 
+.schedule {
+    padding: 50px 20px;
+    background: #2b2b2b;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.schedule-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    background: #1c1c1c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.schedule h2 {
+    font-size: 2.2rem;
+    color: #d2ac3b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.schedule table {
+    width: 100%;
+    border-spacing: 0 15px;
+}
+
+.schedule td {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.schedule td:first-child {
+    text-align: left;
+    color: #ffb400;
+}
+
+.schedule td:last-child {
+    text-align: right;
+    color: #fff;
+}
+
+
+.statystyki {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.statystyki h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.statystyki-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.statystyka {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.statystyka h3 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.statystyka p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+}
+
+
+/* Responsywność dla urządzeń mobilnych i tabletów */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .text-content {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .naglowek {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .naglowek img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .naglowek h2 {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .schedule-container {
+        padding: 10px;
+    }
+
+    .schedule h2 {
+        font-size: 1.8rem;
+    }
+
+    .schedule table td {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        min-width: unset;
+        flex: unset;
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-content .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .schedule h2 {
+        font-size: 1.5rem;
+    }
+
+    .schedule table td {
+        font-size: 0.9rem;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-social h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+#fsdias {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.fsdias-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.fsdias-barber {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fsdias-barber img {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.barber-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+.barber-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.barber-info, .barber-bio {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: block;
+    color: white;
+}
+
+.barber-cytot {
+    font-style: italic;
+    color: #ccc;
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.barber-contact {
+    display: inline-block;
+    text-decoration: none;
+    background: #d4af37;
+    color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.barber-contact:hover {
+    background: #b08c2e;
+    color: white;
+}
     </style>
 </head>
 <body>
@@ -400,63 +702,106 @@ ul li {
     <header class="naglowek">
         <a href="./index.html"><img src="../zdj/logo1.png" alt="Logo Barber Shop"></a>
         <h2><a class="onas" href="../index/onas.html">O NAS</a></h2>
-        <h2><a id="galeria" href="../index/Galeria.html">GALERIA</a></h2>
-        <h2><a id="kontakt" href="../index/Kontakt.html">KONTAKT</a></h2>
-        <h2><a id="regulamin" href="../index/Regulamin.html">REGULAMIN</a></h2>
         <h2><a id="regulamin" href="../index/uslugi.html">USŁUGI</a></h2>
+        <h2><a id="galeria" href="../index/Galeria.html">GALERIA</a></h2>
+        <h2><a id="regulamin" href="../index/Regulamin.html">REGULAMIN</a></h2>
+        <h2><a id="kontakt" href="../index/Kontakt.html">KONTAKT</a></h2>
     </header>
 
 
-    <div class="container">
-        <div class="text-content">
-            <span>CHOOSE YOUR STYLE</span>
-            <h1>THE BARBER SHOP</h1>
-            <p>Experience the finest grooming and styling services for men. Tradition meets modern elegance at our barber shop.</p>
-            <a href="../index/Kontakt.html" class="btn">Book Now</a>
-        </div>
-
-        <div class="image-container">
-            <img src="" alt="Barber">
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h2>Barbers Two</h2>
-                <p>Najlepsze miejsce na męską pielęgnację. Styl, elegancja i precyzja w jednym miejscu.</p>
-            </div>
-
-            <div class="footer-links">
-                <h3>Nawigacja</h3>
-                <ul>
-                    <li><a href="#services">Usługi</a></li>
-                    <li><a href="#about">O nas</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-contact">
-                <h3>Kontakt</h3>
-                <p><i class="fas fa-phone-alt"></i> +48 666 341 272</p>
-                <p><i class="fas fa-envelope"></i> barbers.two@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> ul. Piękna 24/26A, 00-549 Warszawa</p>
-            </div>
-    
-            <div class="footer-social">
-                <h3>Śledź nas</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <section id="fsdias">
+        <div class="fsdias-container">
+            <h2>Poznaj Naszego Barbera</h2>
+            <div class="fsdias-barber">
+                <img src="../zdj/team.jpg" alt="Zdjęcie barbera">
+                <div class="barber-info">
+                    <h3>Adam Nowak</h3>
+                    <p class="barber-title">Mistrz Barberingu | 10 lat doświadczenia</p>
+                    <blockquote class="barber-cytot">
+                        "Fryzura to nie tylko wygląd, to pewność siebie."  
+                    </blockquote>
+                    <a href="../index/Kontakt.html" class="barber-contact">Umów się na wizytę</a>
                 </div>
             </div>
         </div>
+    </section>
     
-        <div class="footer-bottom">
-            <p>&copy; 2024 Barbers Two. Wszelkie prawa zastrzeżone.</p>
+
+
+    <section class="schedule">
+        <div class="schedule-container">
+            <h2>Harmonogram Otwarcia</h2>
+            <table>
+                <tr>
+                    <td>Poniedziałek - Piątek:</td>
+                    <td>9:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Sobota:</td>
+                    <td>10:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Niedziela:</td>
+                    <td>Zamknięte</td>
+                </tr>
+            </table>
         </div>
-    </footer>
+    </section>
+    
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([51.354047, 21.584085], 16);
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        L.marker([51.354047, 21.584085]).addTo(map)
+            .bindPopup('<b>Krakowska 15a</b><br>Zwoleń')
+            .openPopup();
+    </script>
+    
+    
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Brand Barber</h2>
+            <p>Najlepsze miejsce na męską pielęgnację. Styl, elegancja i precyzja w jednym miejscu.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Nawigacja</h3>
+            <ul>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Kontakt</h3>
+            <p><i class="fas fa-phone-alt"></i> +48 666 341 272</p>
+            <p><i class="fas fa-envelope"></i> brand.barber@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> ul. Piękna 24/26A, 00-549 Warszawa</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Śledź nas</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Brand Barber. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
     <script src="../js/strzala.js"></script>
 </body>
 </html>
