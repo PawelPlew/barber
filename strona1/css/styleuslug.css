@@ -363,7 +363,6 @@ a:hover {
         margin-top: 10px;
     }
 }
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -381,7 +380,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header */
 .naglowek {
     background-color: #040101;
     height: 200px;
@@ -411,7 +409,7 @@ a:hover {
 }
 
 .naglowek .onas, #galeria, #kontakt, #regulamin {
-    padding: 10px 20px; /* Odstępy wokół tekstu */
+    padding: 10px 20px; 
 }
 
 .naglowek a {
@@ -428,7 +426,6 @@ a:hover {
     box-shadow: 0px 0px 10px rgba(240, 198, 116, 0.8);
 }
 
-/* Hero Section */
 .hero {
     background-color: #333;
     padding: 60px 20px;
@@ -445,7 +442,6 @@ a:hover {
     font-size: 18px;
 }
 
-/* Services Section */
 .services-section {
     padding: 40px 20px;
 }
@@ -491,7 +487,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
 .footer {
     background-color: #111;
     color: #fff;
@@ -533,4 +528,84 @@ a:hover {
 .footer-social .social-icons a:hover {
     color: #d2ac3b;
     transform: scale(1.2);
+}
+
+
+
+
+
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .naglowek {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .naglowek img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .naglowek a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .naglowek {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .naglowek img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .naglowek a {
+        display: block;
+        padding: 10px;
+    }
+
+    .services-grid, .extras-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .service-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .service-card img {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: block;
+    }
+
+    .footer-social .social-icons a {
+        font-size: 1.5rem;
+        margin: 5px;
+    }
 }

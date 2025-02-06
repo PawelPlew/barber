@@ -599,15 +599,6 @@ section h1, section h2 {
 
 
 
-/* #tel{
-    color: #d2ac3b;
-}
-.email{
-    color: #d2ac3b;    
-}
-#addres{
-    color: #d2ac3b;
-} */
 .nagl{
     color: #d2ac3b;
 }
@@ -1079,3 +1070,122 @@ img.displaySlide{
 }
 
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+.naglowek {
+    background-color: #040101;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+}
+
+.naglowek img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .naglowek {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .naglowek img {
+        width: 100px;
+    }
+
+    .naglowek a {
+        font-size: 1rem;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-brand, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        display: inline-block;
+    }
+}

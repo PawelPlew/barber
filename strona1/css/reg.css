@@ -31,9 +31,6 @@ li {
     line-height: 1.6;
 }
 
-
-
-/* Główna treść */
 main.regulamin-container {
     padding: 40px 15px;
     max-width: 1200px;
@@ -58,7 +55,6 @@ main.regulamin-container {
 
 .section-title {
     font-size: 1.5rem;
-    /* color: gold; */
     color: #d2ac3b;
     margin-bottom: 15px;
     border-bottom: 2px solid #d2ac3b;
@@ -144,7 +140,7 @@ main.regulamin-container {
 }
 
 .naglowek .onas, #galeria, #kontakt, #regulamin {
-    padding: 10px 20px; /* Odstępy wokół tekstu */
+    padding: 10px 20px; 
 }
 
 .naglowek .onas{
@@ -152,7 +148,6 @@ main.regulamin-container {
     color: #d2ac3b;
 }
 
-/* Stylizacja stopki */
 .footer {
     background-color: #111;
     color: #fff;
@@ -169,7 +164,6 @@ main.regulamin-container {
     margin: 0 auto;
 }
 
-/* Logo i opis */
 .footer-brand {
     flex: 1;
     min-width: 250px;
@@ -186,7 +180,6 @@ main.regulamin-container {
     font-size: 1rem;
 }
 
-/* Linki nawigacyjne */
 .footer-links {
     flex: 1;
     min-width: 200px;
@@ -217,7 +210,6 @@ main.regulamin-container {
     color: #d2ac3b;
 }
 
-/* Kontakt */
 .footer-contact {
     flex: 1;
     min-width: 250px;
@@ -241,7 +233,6 @@ main.regulamin-container {
     color: #d2ac3b;
 }
 
-/* Media społecznościowe */
 .footer-social {
     flex: 1;
     min-width: 200px;
@@ -266,7 +257,6 @@ main.regulamin-container {
     transform: scale(1.2);
 }
 
-/* Dolny pasek stopki */
 .footer-bottom {
     margin-top: 30px;
     text-align: center;
