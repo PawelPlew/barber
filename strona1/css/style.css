@@ -1156,14 +1156,14 @@ body {
     }
 }
 
-.footer-container {
+/* .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
     text-align: center;
     padding: 20px;
-}
+} */
 
 .footer-brand, .footer-links, .footer-contact, .footer-social {
     flex: 1;
