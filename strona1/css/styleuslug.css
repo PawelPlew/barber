@@ -540,7 +540,6 @@ a:hover {
     .naglowek {
         flex-direction: column;
         height: auto;
-        padding: 20px 0;
     }
 
     .naglowek img {
