@@ -1,2 +1,2 @@
 https://github.com/PawelPlew
-https://skibidislicer12.github.io/barber/strona1/index/index.html
+https://PawelPlew.github.io/barber/strona1/index/index.html
