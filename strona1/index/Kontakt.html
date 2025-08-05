@@ -86,9 +86,21 @@
         </div>
     
         <div class="footer-bottom">
+            <br><br>
             <p>&copy; 2024 Brand Barber. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
     <script src="../js/strzala.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header.naglowek");
+        if (header) {
+            setTimeout(() => {
+                header.classList.add("visible");
+            }, 100); // małe opóźnienie po załadowaniu strony
+        }
+    });
+</script>
+
 </body>
 </html>

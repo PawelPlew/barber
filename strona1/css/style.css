@@ -1310,3 +1310,58 @@ body {
         padding: 30px 10px;
     }
 }
+
+
+
+/* Początkowy stan headera (ukryty i przesunięty w górę) */
+header.naglowek {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 999;
+    position: relative;
+}
+
+/* Aktywny stan po załadowaniu */
+header.naglowek.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Linki w headerze (O NAS, GALERIA itd.) */
+header.naglowek h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Sekwencyjne opóźnienia */
+header.naglowek.visible h2:nth-of-type(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+header.naglowek.visible h2:nth-of-type(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.45s;
+}
+
+header.naglowek.visible h2:nth-of-type(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+header.naglowek.visible h2:nth-of-type(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.75s;
+}
+
+header.naglowek.visible h2:nth-of-type(5) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}

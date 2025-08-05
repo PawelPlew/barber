@@ -68,3 +68,13 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth',
     });
 });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header.naglowek");
+        if (header) {
+            setTimeout(() => {
+                header.classList.add("visible");
+            }, 100); // małe opóźnienie po załadowaniu strony
+        }
+    });

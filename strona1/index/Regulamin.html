@@ -137,5 +137,16 @@
         </div>
     </footer>
     <script src="../js/strzala.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header.naglowek");
+        if (header) {
+            setTimeout(() => {
+                header.classList.add("visible");
+            }, 100); // małe opóźnienie po załadowaniu strony
+        }
+    });
+</script>
+
 </body>
 </html>

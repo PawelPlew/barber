@@ -716,3 +716,463 @@ a:hover {
         padding: 30px 10px;
     }
 }
+/* Początkowy stan headera (ukryty i przesunięty w górę) */
+header.naglowek {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 999;
+    position: relative;
+}
+
+/* Aktywny stan po załadowaniu */
+header.naglowek.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Linki w headerze (O NAS, GALERIA itd.) */
+header.naglowek h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Sekwencyjne opóźnienia */
+header.naglowek.visible h2:nth-of-type(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+header.naglowek.visible h2:nth-of-type(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.45s;
+}
+
+header.naglowek.visible h2:nth-of-type(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+header.naglowek.visible h2:nth-of-type(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.75s;
+}
+
+header.naglowek.visible h2:nth-of-type(5) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.naglowek {
+    background-color: #040101;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray; 
+    position: relative; 
+    z-index: 10; 
+}
+
+.naglowek img {
+    width: 150px;
+    height: 150px;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1); 
+    color: #f0c674; 
+}
+
+.naglowek .onas, #galeria, #kontakt, #regulamin {
+    padding: 10px 20px; /* Odstępy wokół tekstu */
+}
+
+.naglowek .onas{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+
+.naglowek a {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    display: inline-block; 
+    padding: 10px 20px; 
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+    box-shadow: 0px 0px 10px rgba(240, 198, 116, 0.8);
+}
+.naglowek #galeria{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #kontakt{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+.naglowek #regulamin{
+    text-decoration: none;
+    color: #d2ac3b;
+}
+
+
+/* Animacja przesuwania z lewej */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateX(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja przesuwania z prawej */
+@keyframes slideInRight {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateX(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja przesuwania w górę */
+@keyframes slideInUp {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateY(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Animacja zanikania i przesuwania w górę */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;             /* Końcowa przezroczystość */
+        transform: translateY(0); /* Końcowa pozycja (zerowanie przesunięcia) */
+    }
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 768px) {
+    section h1, section h2 {
+        font-size: 2rem;          /* Mniejszy rozmiar nagłówków na urządzeniach mobilnych */
+    }
+
+    section p, section ul li {
+        font-size: 1rem;          /* Mniejsza czcionka dla lepszej czytelności na mobilnych */
+    }
+
+    #about-us h1, #about-us h2 {
+        font-size: 2.5rem;        /* Mniejszy rozmiar tytułów na mobilnych */
+    }
+
+    #about-us p {
+        font-size: 1.1rem;        /* Dostosowanie rozmiaru czcionki w paragrafach na mobilnych */
+        max-width: 100%;          /* Pozwól, aby tekst rozciągał się na szerokość ekranu */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: inline-block;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+.naglowek {
+    background-color: #040101;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray;
+    position: relative;
+    z-index: 10;
+}
+
+.naglowek img {
+    width: 150px;
+    height: 150px;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+    box-shadow: 0px 0px 10px rgba(240, 198, 116, 0.8);
+}
+
+
+
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    section h1, section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        width: 90%;
+    }
+
+    .social-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Nagłówek */
+.header {
+    background-color: #1c1a19;
+    color: #f0c674;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+.naglowek {
+    background-color: #040101;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 20px gray;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+}
+
+.naglowek img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+}
+
+.naglowek a {
+    text-decoration: none;
+    color: #d2ac3b;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px;
+}
+
+.naglowek a:hover {
+    transform: scale(1.1);
+    color: #f0c674;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: inline-block;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    .naglowek {
+        height: auto;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .naglowek img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .naglowek h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .naglowek {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .naglowek img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .naglowek a {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    main.regulamin-container {
+        padding: 20px;
+        box-shadow: none;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .styled-list li {
+        font-size: 0.9rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links ul {
+        display: inline-block;
+    }
+    
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .naglowek img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .naglowek h2 {
+        font-size: 0.9rem;
+    }
+    
+    main.regulamin-container {
+        padding: 15px;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .styled-list li {
+        font-size: 0.85rem;
+    }
+    
+    .footer {
+        padding: 30px 10px;
+    }
+}
